@@ -292,14 +292,6 @@
 <li>通过操作资源的表现形式来操作资源。</li>
 <li>资源的表现形式则是XML或者HTML，取决于读者是机器还是人，是消费web服务的客户软件还是web浏览器。当然也可以是任何其他的格式。</li>
 </ul>
-<h4 id="REST关键原则"><a href="#REST关键原则" class="headerlink" title="REST关键原则"></a>REST关键原则</h4><p>REST定义了应该如何正确地使用Web标准，例如HTTP和URI。如果你在设计应用程序时能坚持REST原则，那就预示着你将会得到一个使用了优质Web架构（这将让你受益）的系统。总之，五条关键原则列举如下：</p>
-<ul>
-<li>为所有“事物”定义ID</li>
-<li>将所有事物链接在一起</li>
-<li>使用标准方法</li>
-<li>资源多重表述</li>
-<li>无状态通信</li>
-</ul>
 <h4 id="REST的优点"><a href="#REST的优点" class="headerlink" title="REST的优点"></a>REST的优点</h4><ul>
 <li>可以利用缓存Cache来提高响应速度</li>
 <li>通讯本身的无状态性可以让不同的服务器的处理一系列请求中的不同请求，提高服务器的扩展性</li>
@@ -308,16 +300,22 @@
 <li>不需要额外的资源发现机制</li>
 <li>在软件技术演进中的长期的兼容性更好</li>
 </ul>
-<h4 id="RESTful-Web-服务"><a href="#RESTful-Web-服务" class="headerlink" title="RESTful Web 服务"></a>RESTful Web 服务</h4><p>RESTful Web 服务（也称为 RESTful Web API）是一个使用HTTP并遵循REST原则的Web服务。它从以下三个方面资源进行定义：</p>
+<h4 id="什么是幂等"><a href="#什么是幂等" class="headerlink" title="什么是幂等"></a>什么是幂等</h4><p>幂等是一个数学与计算机学概念，常见于抽象代数中。 在编程中.一个幂等操作的特点是其任意多次执行所产生的影响均与一次执行的影响相同。幂等函数，或幂等方法，是指可以使用相同参数重复执行，并能获得相同结果的函数。这些函数不会影响系统状态，也不用担心重复执行会对系统造成改变。例如，1的n次方的值始终为1，不管n怎么变化。</p>
 <ul>
-<li>URI，比如：<a href="http://blog.devshuo.com/articles/。">http://blog.devshuo.com/articles/。</a></li>
-<li>Web服务接受与返回的互联网媒体类型，比如：JSON，XML ，YAML 等。</li>
-<li>Web服务在该资源上所支持的一系列请求方法（比如：POST，GET，PUT或DELETE）。</li>
+<li>GET方法具有幂等性，多个相同请求返回相同的结果。 幂等性保证了你可以简单地再发送一次请求解决问题。</li>
+<li>PUT方法同样具有幂等性，基本的含义是“更新资源数据，如果资源不存在的话，则根据此URI创建一个新的资源”。</li>
+<li>幂等性也同样适用于DELETE，你完全可以一遍又一遍地操作它，直到得出结论——删除不存在的东西没有任何问题。</li>
+<li>POST方法，通常表示“创建一个新资源”，每次执行一次POST方法，都会创建出一个新的资源，因而它既不安全也不具有幂等性。</li>
 </ul>
-<table width="90%"><br>    <tr><br>        <td>资源</td><br>        <td>一组资源的URI，比如<a href="http://blog.devshuo.com/articles">http://blog.devshuo.com/articles</a></td><br>        <td>单个资源的URI，比如<a href="http://blog.devshuo.com/articles/1">http://blog.devshuo.com/articles/1</a></td><br>    </tr><br>    <tr><br>        <td>GET</td><br>        <td>列出 URI，以及该资源组中每个资源的详细信息（后者可选）。</td><br>        <td>获取 指定的资源的详细信息，格式可以自选一个合适的网络媒体类型（比如：XML、JSON等）</td><br>    </tr><br>    <tr><br>        <td>PUT</td><br>        <td>使用给定的一组资源替换当前整组资源。</td><br>        <td>替换/创建 指定的资源。并将其追加到相应的资源组中。</td><br>    </tr><br>    <tr><br>        <td>POST</td><br>        <td>在本组资源中创建/追加一个新的资源。 该操作往往返回新资源的URL。</td><br>        <td>把指定的资源当做一个资源组，并在其下创建/追加一个新的元素，使其隶属于当前资源。</td><br>    </tr><br>    <tr><br>        <td>DELETE</td><br>        <td>删除整组资源。</td><br>        <td>删除指定的元素。</td><br>    </tr><br></table>
-
-<h4 id="什么是幂等"><a href="#什么是幂等" class="headerlink" title="什么是幂等"></a>什么是幂等</h4><p>幂等（idempotent、idempotence）是一个数学与计算机学概念，常见于抽象代数中。 在编程中.一个幂等操作的特点是其任意多次执行所产生的影响均与一次执行的影响相同。幂等函数，或幂等方法，是指可以使用相同参数重复执行，并能获得相同结果的函数。这些函数不会影响系统状态，也不用担心重复执行会对系统造成改变。例如，1^n的值始终为1，不管n怎么变化。</p>
-<p>PUT 和 DELETE 方法是幂等方法。GET方法是安全方法 （不会对服务器端有修改，因此当然也是幂等的）。<br>POST 不是幂等方法，所以对POST方法进行操作的时候要小心。</p>
+<p><img src="/images/BlogTitle/rest_demo.jpg" alt="Alt text"></p>
+<h4 id="REST关键原则"><a href="#REST关键原则" class="headerlink" title="REST关键原则"></a>REST关键原则</h4><p>REST定义了应该如何正确地使用Web标准，例如HTTP和URI。如果你在设计应用程序时能坚持REST原则，那就预示着你将会得到一个使用了优质Web架构（这将让你受益）的系统。总之，五条关键原则列举如下：</p>
+<ul>
+<li>为所有“事物”定义ID</li>
+<li>将所有事物链接在一起</li>
+<li>使用标准方法</li>
+<li>资源多重表述</li>
+<li>无状态通信</li>
+</ul>
 
           
         
