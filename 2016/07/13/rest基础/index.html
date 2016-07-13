@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>开发者说</title>
+  <title>REST基础 | 开发者说</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="逝者如斯夫,不舍昼夜.记录工作的点点滴滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="开发者说">
-<meta property="og:url" content="http://blog.devshuo.com/index.html">
+  <meta name="description" content="什么是RESTREST（Representational State Transfer）表征状态转移是Roy Fielding博士在2000年他的博士论文“Architectural Styles and the Design of Network-based Software Architectures”中提出来的一种软件架构风格。他的论文中对使用 Web 服务作为分布式计算平台的一系列软件体系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="REST基础">
+<meta property="og:url" content="http://blog.devshuo.com/2016/07/13/rest基础/index.html">
 <meta property="og:site_name" content="开发者说">
-<meta property="og:description" content="逝者如斯夫,不舍昼夜.记录工作的点点滴滴">
+<meta property="og:description" content="什么是RESTREST（Representational State Transfer）表征状态转移是Roy Fielding博士在2000年他的博士论文“Architectural Styles and the Design of Network-based Software Architectures”中提出来的一种软件架构风格。他的论文中对使用 Web 服务作为分布式计算平台的一系列软件体系">
+<meta property="og:updated_time" content="2016-07-13T13:51:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开发者说">
-<meta name="twitter:description" content="逝者如斯夫,不舍昼夜.记录工作的点点滴滴">
+<meta name="twitter:title" content="REST基础">
+<meta name="twitter:description" content="什么是RESTREST（Representational State Transfer）表征状态转移是Roy Fielding博士在2000年他的博士论文“Architectural Styles and the Design of Network-based Software Architectures”中提出来的一种软件架构风格。他的论文中对使用 Web 服务作为分布式计算平台的一系列软件体系">
   
     <link rel="alternative" href="/atom.xml" title="开发者说" type="application/atom+xml">
   
@@ -27,9 +28,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -40,8 +38,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -127,9 +125,7 @@
     </div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-rest基础" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-rest基础" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/07/13/rest基础/" class="article-date">
@@ -145,12 +141,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/13/rest基础/">REST基础</a>
+    <h1 class="article-title" itemprop="name">
+      REST基础
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/REST-http/">REST http</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -194,101 +201,147 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/REST-http/">REST http</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/07/13/rest基础/">REST基础</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Nesta Zhang 的个人博客">Nesta Zhang</a></p>
+        <p><span>发布时间:</span>2016年07月13日 - 21时11分</p>
+        <p><span>最后更新:</span>2016年07月13日 - 21时51分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/13/rest基础/" title="REST基础">http://blog.devshuo.com/2016/07/13/rest基础/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.devshuo.com/2016/07/13/rest基础/　　作者: Nesta Zhang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/12/写在开始/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">写在开始</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是REST"><span class="toc-number">1.</span> <span class="toc-text">什么是REST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#宗旨"><span class="toc-number">2.</span> <span class="toc-text">宗旨</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#要点及标准"><span class="toc-number">3.</span> <span class="toc-text">要点及标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REST的要求"><span class="toc-number">4.</span> <span class="toc-text">REST的要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RESTful-Web-服务"><span class="toc-number">5.</span> <span class="toc-text">RESTful Web 服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#什么是幂等"><span class="toc-number">6.</span> <span class="toc-text">什么是幂等</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REST的优点"><span class="toc-number">7.</span> <span class="toc-text">REST的优点</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-    <article id="post-写在开始" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/12/写在开始/" class="article-date">
-      <time datetime="2016-07-12T01:09:10.000Z" itemprop="datePublished">2016-07-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/07/13/rest基础/" data-title="REST基础" data-url="http://blog.devshuo.com/2016/07/13/rest基础/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/12/写在开始/">写在开始</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>这个域名是2016年7月10号那天买的。买域名的时候，试了几个比较短的域名，都被人注册了，我心思试试这种中西命名方式的域名吧，于是就有了这个域名：</p>
-<blockquote>
-<p>devshuo.com</p>
-</blockquote>
-<p>然后给它取了个洋气的名字</p>
-<h1 id="开发者说"><a href="#开发者说" class="headerlink" title="开发者说"></a>开发者说</h1><p>——————无耻的分割线——————</p>
-<p>用上一个域名phpwap.cn的时候，当时还在用php开发freewap，后来由于运营商政策的整改，wap成了昨日黄花，08年后就不再写wap了，那个时候我朝要求域名实名认证，感觉太麻烦了，就没有再继续保留这个域名，前几天发现这个域名已经有了新的主人。</p>
-<p>后来网易推出windows版的有道云笔记，开始使用有道云笔记写文章，都是我这几年的工作笔记。无奈mac版的有道云笔记总是丢文章，我通常写文章都是先拿md工具对文章进行排版，然后粘贴进有道云笔记中，下次再看文章的时候，发现只剩下一个标题，给有道云笔记的微博帐号提bug，没人理我，我以为会在新版中修复这个问题，结果等了几个新版，都还是丢文章，前段时间我发现又丢了一篇文章，那篇文章我整理了好久。。。而且我没有相应的备份，彻底怒了。</p>
-<p>还是决定自己建一个blog，在网上找了一些blog的开源产品，最后选择了Hexo，Hexo可以将文章同步到Github上，并且支持我喜欢的md语法，决定开始使用Hexo。所以这个blog是建在Github上的，我做了一个域名的cname解析。</p>
-<p>感觉自己又回到了05年的那个夏天。。。</p>
-<p>先写这么多。</p>
-
-      
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/07/12/写在开始/" title="下一篇: 写在开始">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开篇/">开篇</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/rest基础/">REST基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/12/写在开始/">写在开始</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
 
 
-
-
-  
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
