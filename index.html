@@ -285,7 +285,7 @@
             <h4 id="什么是REST"><a href="#什么是REST" class="headerlink" title="什么是REST"></a>什么是REST</h4><p>REST（Representational State Transfer）表征状态转移是Roy Fielding博士在2000年他的博士论文“Architectural Styles and the Design of Network-based Software Architectures”中提出来的一种软件架构风格。他的论文中对使用 Web 服务作为分布式计算平台的一系列软件体系结构原则进行了分析。</p>
 <p>目前在三种主流的Web服务实现方案中，因为REST模式的Web服务与复杂的SOAP和XML-RPC对比来讲明显的更加简洁，越来越多的web服务开始采用REST风格设计和实现。例如，Amazon.com提供接近REST风格的Web服务进行图书查找；雅虎提供的Web服务也是REST风格的。</p>
 <h4 id="宗旨"><a href="#宗旨" class="headerlink" title="宗旨"></a>宗旨</h4><p>REST从资源的角度来观察整个网络，分布在各处的资源由URI确定，而客户端的应用通过URI来获取资源的表征。获得这些表征致使这些应用程序转变了其状态。随着不断获取资源的表征，客户端应用不断地在转变着其状态，所谓表征状态转移（Representational State Transfer）。<br>这一观点不是凭空臆造的，而是通过观察当前Web互联网的运作方式而抽象出来的。Roy Fielding 认为，<code>设计良好的网络应用表现为一系列的网页，这些网页可以看作的虚拟的状态机，用户选择这些链接导致下一网页传输到用户端展现给使用的人，而这正代表了状态的转变。</code></p>
-<h4 id="要点及标准"><a href="#要点及标准" class="headerlink" title="要点及标准"></a>要点及标准</h4><p>需要注意的是，REST是设计风格而不是标准。REST通常基于使用HTTP，URI，和XML以及GSON这些现有的广泛流行的协议和标准。</p>
+<h4 id="要点及标准"><a href="#要点及标准" class="headerlink" title="要点及标准"></a>要点及标准</h4><p>需要注意的是，REST是设计风格而不是标准。REST通常基于使用HTTP，URI，和XML以及JSON这些现有的广泛流行的协议和标准。</p>
 <ul>
 <li>资源是由URI来指定。</li>
 <li>对资源的操作包括获取、修改、创建和删除资源，这些操作正好对应HTTP协议提供的GET、POST、PUT和DELETE方法。</li>
@@ -300,6 +300,14 @@
 <li>资源多重表述</li>
 <li>无状态通信</li>
 </ul>
+<h4 id="REST的优点"><a href="#REST的优点" class="headerlink" title="REST的优点"></a>REST的优点</h4><ul>
+<li>可以利用缓存Cache来提高响应速度</li>
+<li>通讯本身的无状态性可以让不同的服务器的处理一系列请求中的不同请求，提高服务器的扩展性</li>
+<li>浏览器即可作为客户端，简化软件需求</li>
+<li>相对于其他叠加在HTTP协议之上的机制，REST的软件依赖性更小</li>
+<li>不需要额外的资源发现机制</li>
+<li>在软件技术演进中的长期的兼容性更好</li>
+</ul>
 <h4 id="RESTful-Web-服务"><a href="#RESTful-Web-服务" class="headerlink" title="RESTful Web 服务"></a>RESTful Web 服务</h4><p>RESTful Web 服务（也称为 RESTful Web API）是一个使用HTTP并遵循REST原则的Web服务。它从以下三个方面资源进行定义：</p>
 <ul>
 <li>URI，比如：<a href="http://blog.devshuo.com/resources/。">http://blog.devshuo.com/resources/。</a></li>
@@ -310,14 +318,6 @@
 
 <h4 id="什么是幂等"><a href="#什么是幂等" class="headerlink" title="什么是幂等"></a>什么是幂等</h4><p>幂等（idempotent、idempotence）是一个数学与计算机学概念，常见于抽象代数中。 在编程中.一个幂等操作的特点是其任意多次执行所产生的影响均与一次执行的影响相同。幂等函数，或幂等方法，是指可以使用相同参数重复执行，并能获得相同结果的函数。这些函数不会影响系统状态，也不用担心重复执行会对系统造成改变。例如，1^n的值始终为1，不管n怎么变化。</p>
 <p>PUT 和 DELETE 方法是幂等方法。GET方法是安全方法 （不会对服务器端有修改，因此当然也是幂等的）。<br>POST 不是幂等方法，所以对POST方法进行操作的时候要小心。</p>
-<h4 id="REST的优点"><a href="#REST的优点" class="headerlink" title="REST的优点"></a>REST的优点</h4><ul>
-<li>可以利用缓存Cache来提高响应速度</li>
-<li>通讯本身的无状态性可以让不同的服务器的处理一系列请求中的不同请求，提高服务器的扩展性</li>
-<li>浏览器即可作为客户端，简化软件需求</li>
-<li>相对于其他叠加在HTTP协议之上的机制，REST的软件依赖性更小</li>
-<li>不需要额外的资源发现机制</li>
-<li>在软件技术演进中的长期的兼容性更好</li>
-</ul>
 
           
         
